@@ -1,0 +1,113 @@
+.Pizza {
+  position: relative;
+  list-style-type: none;
+  display: inline-block;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  /* background-color: bisque; */
+  /* border: 2px solid brown; */
+  /* overflow: hidden;  */
+  padding: 0;
+  margin: 0;
+}
+
+.Pizza li {
+  position: absolute;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 2px solid transparent;
+  background-color: burlywood;
+  width: 50%;
+  height: 50%;
+}
+
+.Pizza li.selected {
+  border-color: green;
+}
+
+.Pizza li:nth-child(1),
+.Pizza li:nth-child(2) {
+  top: 0;
+  border-top: .5rem solid brown;
+}
+
+.Pizza li:nth-child(1),
+.Pizza li:nth-child(3) {
+  left: 0;
+  border-left: .5rem solid brown;
+}
+
+.Pizza li:nth-child(2),
+.Pizza li:nth-child(4) {
+  right: 0;
+  border-right: .5rem solid brown;
+}
+
+.Pizza li:nth-child(3),
+.Pizza li:nth-child(4) {
+  bottom: 0;
+  border-bottom: .5rem solid brown;
+}
+
+.Pizza li:nth-child(3) {
+  border-bottom-left-radius: 100%;
+}
+
+.Pizza li:nth-child(4) {
+  border-bottom-right-radius: 100%;
+}
+
+.Pizza li:nth-child(1) {
+  border-top-left-radius: 100%;
+  
+}
+
+.Pizza li:nth-child(2) {
+  border-top-right-radius: 100%;
+}
+
+/* Selected */
+
+.Pizza.selected--topLeft li:nth-child(1) {
+  border-left-color: green;
+  border-right: 1px dashed green;
+  border-bottom: 1px dashed green;
+}
+
+.Pizza.selected--topRight li:nth-child(2) {
+  border-right-color: green;
+  border-left: 1px dashed green;
+  border-bottom: 1px dashed green;
+}
+
+.Pizza.selected--bottomLeft li:nth-child(3) {
+  border-left-color: green;
+  border-top: 1px dashed green;
+  border-right: 1px dashed green;
+}
+
+.Pizza.selected--bottomRight li:nth-child(4) {
+  border-right-color: green;
+  border-top: 1px dashed green;
+  border-left: 1px dashed green;
+}
+
+.Pizza.selected--leftHalf li:nth-child(1),
+.Pizza.selected--leftHalf li:nth-child(3) {
+  border-left-color: green;
+  border-right: 1px dashed green;
+}
+
+.Pizza.selected--rightHalf li:nth-child(2),
+.Pizza.selected--rightHalf li:nth-child(4) {
+  border-right-color: green;
+  border-left: 1px dashed green;
+}
+
+.Pizza.selected--whole li:nth-child(1),
+.Pizza.selected--whole li:nth-child(2), 
+.Pizza.selected--whole li:nth-child(3), 
+.Pizza.selected--whole li:nth-child(4) {
+  border-color: green;
+}

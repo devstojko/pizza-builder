@@ -1,0 +1,27 @@
+.Card {
+  display: inline-block;
+  background-color: white;
+  padding: .5rem;
+  min-width: 20rem;
+  margin: .5rem;
+}
+
+.Card__header {
+  background-color: blue;
+  border-radius: 2rem;
+  text-align: center;
+  padding: .5rem 0;
+}
+
+.Card__header--active {
+  background-color: brown;
+}
+
+.Card__title {
+  margin: 0;
+  color: white;
+}
+
+.Card__body {
+  min-height: 10rem;
+}

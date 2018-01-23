@@ -1,0 +1,15 @@
+.ButtonGroup {
+  padding: .5rem;
+}
+
+.ButtonGroup__title {
+  margin: 0 0 .25rem 0;
+  font-size: 1rem;
+  color: white;
+}
+
+.ButtonGroup__list {
+  border: 1px solid white;
+  padding: 1rem;
+  display: flex;
+}
