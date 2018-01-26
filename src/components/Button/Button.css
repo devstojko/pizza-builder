@@ -1,3 +1,13 @@
+button {
+  border: 1px solid white;
+  background-color: darkslategrey;
+  margin: .25rem;
+  padding: .5rem 1rem;
+  color: white;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
 button.selected {
-  background-color: red;
+  background-color: lightcoral;
 }

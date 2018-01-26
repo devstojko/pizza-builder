@@ -1,14 +1,20 @@
+// @flow
+
 import React from 'react'
 import './Navigation.css'
 
-const Navigation = props => {
+import Container from '../Layout/Container'
+
+const Navigation = () => {
   return (
-    <nav className="Navigation">
-      <a href="#">Nav Link</a>
-      <a href="#">Nav Link</a>
-      <a href="#">Nav Link</a>
-      <a href="#">Nav Link</a>
-    </nav>
+    <Container>
+       <nav className="Navigation">
+        <a href="#">Nav Link</a>
+        <a href="#">Nav Link</a>
+        <a href="#">Nav Link</a>
+        <a href="#">Nav Link</a>
+      </nav>
+    </Container>
   )
 }
 

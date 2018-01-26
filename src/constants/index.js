@@ -1,0 +1,4 @@
+export const SET_PIZZA_SIZE = 'SET_PIZZA_SIZE';
+export const SET_PIZZA_CRUST = 'SET_PIZZA_CRUST';
+export const SET_PIZZA_PART = 'SET_PIZZA_PART';
+export const SET_TOPPING = 'SET_TOPPING';

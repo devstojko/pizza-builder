@@ -1,53 +1,83 @@
 .Pizza {
+  --size: 350px;
   position: relative;
   list-style-type: none;
   display: inline-block;
-  width: 15rem;
-  height: 15rem;
+  width: var(--size);
+  height: var(--size);
   border-radius: 50%;
   /* background-color: bisque; */
   /* border: 2px solid brown; */
   /* overflow: hidden;  */
   padding: 0;
   margin: 0;
+  grid-area: pizza;
+  justify-self: center;
+  align-self: center;
 }
 
 .Pizza li {
+  --border-color: transparent;
   position: absolute;
   box-sizing: border-box;
   display: inline-block;
-  border: 2px solid transparent;
-  background-color: burlywood;
+  border: 0px solid transparent;
   width: 50%;
   height: 50%;
+  overflow: hidden;
+  background: url('../../assets/pizzaPart.png') left top / cover;
+  transition: transform .2s ease;
+  border-top-left-radius: 100%;
 }
 
-.Pizza li.selected {
+.Pizza li span {
+  box-sizing: content-box;
+}
+
+.Pizza li:nth-child(2) {
+  transform: rotateZ(90deg);
+  right: 0;
+  top: 0;
+}
+
+.Pizza li:nth-child(3) {
+  transform: rotateZ(-90deg);
+  left: 0;
+  bottom: 0;
+}
+
+.Pizza li:nth-child(4) {
+  transform: rotateZ(180deg);
+  right: 0;
+  bottom: 0;
+}
+
+/* .Pizza li.selected {
   border-color: green;
 }
 
 .Pizza li:nth-child(1),
 .Pizza li:nth-child(2) {
   top: 0;
-  border-top: .5rem solid brown;
+  border-top: .5rem solid var(--border-color);
 }
 
 .Pizza li:nth-child(1),
 .Pizza li:nth-child(3) {
   left: 0;
-  border-left: .5rem solid brown;
+  border-left: .5rem solid var(--border-color);
 }
 
 .Pizza li:nth-child(2),
 .Pizza li:nth-child(4) {
   right: 0;
-  border-right: .5rem solid brown;
+  border-right: .5rem solid var(--border-color);
 }
 
 .Pizza li:nth-child(3),
 .Pizza li:nth-child(4) {
   bottom: 0;
-  border-bottom: .5rem solid brown;
+  border-bottom: .5rem solid var(--border-color);
 }
 
 .Pizza li:nth-child(3) {
@@ -65,49 +95,60 @@
 
 .Pizza li:nth-child(2) {
   border-top-right-radius: 100%;
-}
+  
+} */
 
 /* Selected */
 
 .Pizza.selected--topLeft li:nth-child(1) {
-  border-left-color: green;
-  border-right: 1px dashed green;
-  border-bottom: 1px dashed green;
+  transform: translate(-.5rem, -.5rem);
+
 }
 
 .Pizza.selected--topRight li:nth-child(2) {
-  border-right-color: green;
-  border-left: 1px dashed green;
-  border-bottom: 1px dashed green;
+  transform: rotateZ(90deg) translate(-.5rem, -.5rem);
+
 }
 
 .Pizza.selected--bottomLeft li:nth-child(3) {
-  border-left-color: green;
-  border-top: 1px dashed green;
-  border-right: 1px dashed green;
+  transform: rotateZ(-90deg) translate(-.5rem, -.5rem);
+
 }
 
 .Pizza.selected--bottomRight li:nth-child(4) {
-  border-right-color: green;
-  border-top: 1px dashed green;
-  border-left: 1px dashed green;
+  transform: rotateZ(180deg) translate(-.5rem, -.5rem);
 }
 
-.Pizza.selected--leftHalf li:nth-child(1),
+.Pizza.selected--leftHalf li:nth-child(1) {
+  transform: translate(-.5rem, 0);
+}
 .Pizza.selected--leftHalf li:nth-child(3) {
-  border-left-color: green;
-  border-right: 1px dashed green;
+  transform: rotateZ(-90deg) translate(0, -.5rem);
 }
 
-.Pizza.selected--rightHalf li:nth-child(2),
+.Pizza.selected--rightHalf li:nth-child(2) {
+  transform: rotateZ(90deg) translate(0, -.5rem);
+}
 .Pizza.selected--rightHalf li:nth-child(4) {
+  transform: rotateZ(180deg) translate(-.5rem, 0);
+}
+
+/* .Pizza.selected--whole li:nth-child(1),
+.Pizza.selected--whole li:nth-child(3) {
+  border-left-color: green;
+}
+
+.Pizza.selected--whole li:nth-child(2), 
+.Pizza.selected--whole li:nth-child(4) {
   border-right-color: green;
-  border-left: 1px dashed green;
 }
 
 .Pizza.selected--whole li:nth-child(1),
-.Pizza.selected--whole li:nth-child(2), 
-.Pizza.selected--whole li:nth-child(3), 
-.Pizza.selected--whole li:nth-child(4) {
-  border-color: green;
+.Pizza.selected--whole li:nth-child(2) {
+  border-top-color: green;
 }
+
+.Pizza.selected--whole li:nth-child(3),
+.Pizza.selected--whole li:nth-child(4) {
+  border-bottom-color: green;
+} */

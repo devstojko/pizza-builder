@@ -1,14 +1,31 @@
+// @flow
+
 import React from 'react';
 
 import './Button.css';
 
-const Button = ({clicked, value, title, group, selected}) => {
+const Button = ({
+  clicked,
+  value,
+  title,
+  group,
+  selected
+}: {
+  clicked: (value: string, group: string) => void,
+  value: string,
+  title: string,
+  group: string,
+  selected?: Array<string>
+}) => {
 
-  const className = selected === value || selected.includes(value) ? 'selected' : null;
+  let className = selected === value ? 'selected' : null
 
+  if (typeof selected === 'object') {
+    className = selected.includes(value) ? 'selected' : null
+  }
 
   return (
-    <button className={className} onClick={() => clicked(group, value)}>{title}</button>
+    <button className={className} onClick={() => clicked(value, group)}>{title}</button>
   )
 }
 

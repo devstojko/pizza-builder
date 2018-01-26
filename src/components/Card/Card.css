@@ -1,9 +1,8 @@
 .Card {
   display: inline-block;
   background-color: white;
-  padding: .5rem;
-  min-width: 20rem;
-  margin: .5rem;
+  padding: 1rem;
+  
 }
 
 .Card__header {
@@ -24,4 +23,14 @@
 
 .Card__body {
   min-height: 10rem;
+  max-height: 10rem;
+  margin-top: 1rem;
+  overflow-y: auto;
+}
+
+.Card__body-item {
+  margin-top: 0;
+  margin-bottom: .25rem;
+  display: flex;
+  justify-content: space-between;
 }
